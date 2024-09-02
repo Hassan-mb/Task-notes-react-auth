@@ -34,4 +34,8 @@ const getAllUsers = async () => {
   return data;
 };
 
-export { login, register, me, getAllUsers };
+const logout = () => {
+  localStorage.removeItem("token");
+};
+
+export { login, register, me, getAllUsers, logout };
